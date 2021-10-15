@@ -1,4 +1,5 @@
 -- you can use this ui ;3 free for all
+
 do if game.CoreGui:FindFirstChild("Nights Ui") then game.CoreGui:FindFirstChild("Nights Ui"):Destroy() end end;
 
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
@@ -541,7 +542,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		local ContainerContent = {}
 		function ContainerContent:Button(text, desc, callback)
 			if desc == "" or desc == nil then
-				desc = "Notting"
+				desc = "do not have anything"
 			end
 			local BtnDescToggled = false
 			local Button = Instance.new("TextButton")
@@ -777,7 +778,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			local ToggleDescToggled = false
 			local Toggled = false
 			if desc == "" or desc == nil then
-				desc = "Notting"
+				desc = "do not have anything"
 			end
 			local Toggle = Instance.new("TextButton")
 			local ToggleCorner = Instance.new("UICorner")
@@ -1039,7 +1040,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				):Play()
 				Toggled = not Toggled
 				pcall(callback, Toggled)
-			elseif default == false then
+			else
 			    pcall(callback, Toggled)
 			end
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
@@ -1050,7 +1051,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			local SliderDescToggled = false
             local dragging = false
 			if desc == "" or desc == nil then
-				desc = "Notting"
+				desc = "do not have anything"
 			end
 			local Slider = Instance.new("TextButton")
 			local SliderCorner = Instance.new("UICorner")
@@ -2443,7 +2444,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		end
 		function ContainerContent:Textbox(text,desc,disapper,callback)
 			if desc == "" or desc == nil then
-				desc = "Notting"
+				desc = "do not have anything"
 			end
 			local TextboxDescToggled = false
 			local Textbox = Instance.new("TextButton")
@@ -2891,7 +2892,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			function(current, pressed)
 				if not pressed then
 					if current.KeyCode.Name == Key then
-						pcall(callback)
+						pcall(callback,Key)
 					end
 				end
 			end
