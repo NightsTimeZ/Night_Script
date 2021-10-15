@@ -443,13 +443,12 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		TabTitle.Parent = Tab
 		TabTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		TabTitle.BackgroundTransparency = 1.000
-		TabTitle.Position = UDim2.new(0.3, 0, 0.28, 0)
+		TabTitle.Position = UDim2.new(0.23, 0, 0.28, 0)
 		TabTitle.Size = UDim2.new(0, 113, 0, 19)
 		TabTitle.Font = Enum.Font.GothamBold
 		TabTitle.Text = text
 		TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TabTitle.TextSize = 15.000
-		TabTitle.TextXAlignment = Enum.TextXAlignment.Left
 		TabTitle.TextTransparency = .3
 		
 		local Container = Instance.new("ScrollingFrame")
