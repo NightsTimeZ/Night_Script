@@ -583,7 +583,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			Title.Font = Enum.Font.GothamBold
 			Title.Text = text
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-			Title.TextSize = 15.000
+			Title.TextSize = 15
 			Title.TextTransparency = 0.300
 			Title.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -648,27 +648,38 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			ArrowIco.ImageTransparency = 0
 			
 			Button.MouseEnter:Connect(function()
-			    spawn(function()
 				TweenService:Create(
 					Title,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 					{TextTransparency = 0}
 				):Play()
-				end)
 			end)
 			
 			Button.MouseLeave:Connect(function()
-			    spawn(function()
 				TweenService:Create(
 					Title,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
 					{TextTransparency = 0.3}
 				):Play()
-				end)
 			end)
-			
+			local Delayclick = false
 			Button.MouseButton1Click:Connect(function()
-				pcall(callback)
+			    if Delayclick == false then
+			        Delayclick = true
+    			    TweenService:Create(
+    					Title,
+    					TweenInfo.new(.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+    					{TextColor3 = PresetColor}
+    				):Play()
+    				wait(.1)
+    				pcall(callback)
+    				TweenService:Create(
+    					Title,
+    					TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+    					{TextColor3 = Color3.fromRGB(255,255,255)}
+    				):Play()
+    				Delayclick = false
+				end
 			end)
 			
 			ArrowBtn.MouseButton1Click:Connect(function()
