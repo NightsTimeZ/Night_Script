@@ -1,8 +1,6 @@
 -- you can use this ui ;3 free for all
+do if game.CoreGui:FindFirstChild("Nights Ui") then game.CoreGui:FindFirstChild("Nights Ui"):Destroy() end end;
 
-if game.CoreGui:FindFirstChild("Nights Ui") then
-    game.CoreGui:FindFirstChild("Nights Ui"):Destroy()
-end
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
 local UserInputService = game:GetService("UserInputService")
