@@ -2605,9 +2605,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					if ep then
 						if #TextBox.Text > 0 then
 							pcall(callback, TextBox.Text)
-							if disapper then
-								TextBox.Text = ""
-							end
 						end
 					end
 				end
