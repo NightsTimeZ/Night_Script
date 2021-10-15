@@ -412,6 +412,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		local TabIcon = Instance.new("ImageLabel")
 		local TabTitle = Instance.new("TextLabel")
 		local UIGradient = Instance.new('UIGradient')
+		local TabCorner = Instance.new("UICorner")
 
 		Tab.Name = "Tab"
 		Tab.Parent = TabHold
@@ -423,6 +424,10 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		Tab.TextColor3 = Color3.fromRGB(0, 0, 0)
 		Tab.TextSize = 14.000
 		Tab.BackgroundTransparency = 1
+		
+		TabCorner.CornerRadius = UDim.new(0, 4)
+	    TabCorner.Name = "ButtonCorner"
+		TabCorner.Parent = Tab
 		
         UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(160, 207, 236)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(102, 152, 255))}
         UIGradient.Parent = Tab
@@ -1026,6 +1031,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				):Play()
 				Toggled = not Toggled
 				pcall(callback, Toggled)
+			elseif default == false then
+			    pcall(callback, Toggled)
 			end
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
