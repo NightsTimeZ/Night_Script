@@ -1,5 +1,5 @@
 -- you can use this ui ;3 free for all
-do
+
 do if game.CoreGui:FindFirstChild("Nights Ui") then game.CoreGui:FindFirstChild("Nights Ui"):Destroy() end end;
 
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
@@ -2977,4 +2977,3 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	return Tabs
 end
 return Flux
-end
