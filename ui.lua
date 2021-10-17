@@ -1040,6 +1040,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				):Play()
 				Toggled = not Toggled
 				pcall(callback, Toggled)
+			else
+			    pcall(Toggled)
 			end
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
