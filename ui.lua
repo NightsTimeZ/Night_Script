@@ -1575,20 +1575,20 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				local Item = Instance.new("TextButton")
 				local ItemCorner = Instance.new("UICorner")
 				
-			Item.Name = "Item"
-			Item.Parent = DropItemHolder
-			Item.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-			Item.ClipsDescendants = true
-			Item.Size = UDim2.new(0, 427, 0, 25)
-			Item.AutoButtonColor = false
-			Item.Font = Enum.Font.GothamBold
-			Item.Text = v
-			Item.TextColor3 = Color3.fromRGB(255, 255, 255)
-			Item.TextSize = 15.000
-			Item.TextTransparency = 0.300
-
-			ItemCorner.CornerRadius = UDim.new(0, 4)
-			ItemCorner.Name = "ItemCorner"
+    			Item.Name = "Item"
+    			Item.Parent = DropItemHolder
+    			Item.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+    			Item.ClipsDescendants = true
+    			Item.Size = UDim2.new(0, 427, 0, 25)
+    			Item.AutoButtonColor = false
+    			Item.Font = Enum.Font.GothamBold
+    			Item.Text = v
+    			Item.TextColor3 = Color3.fromRGB(255, 255, 255)
+    			Item.TextSize = 15.000
+    			Item.TextTransparency = 0.300
+    
+    			ItemCorner.CornerRadius = UDim.new(0, 4)
+    			ItemCorner.Name = "ItemCorner"
 				ItemCorner.Parent = Item
 				DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, DropLayout.AbsoluteContentSize.Y)
 				
@@ -1668,16 +1668,16 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				local ItemCorner = Instance.new("UICorner")
 
 				Item.Name = "Item"
-    			Item.Parent = DropItemHolder
-    			Item.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-    			Item.ClipsDescendants = true
-    			Item.Size = UDim2.new(0, 427, 0, 25)
-    			Item.AutoButtonColor = false
-    			Item.Font = Enum.Font.GothamBold
-    			Item.Text = v
-    			Item.TextColor3 = Color3.fromRGB(255, 255, 255)
-    			Item.TextSize = 15.000
-    			Item.TextTransparency = 0.300
+				Item.Parent = DropItemHolder
+				Item.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+				Item.ClipsDescendants = true
+				Item.Size = UDim2.new(0, 427, 0, 25)
+				Item.AutoButtonColor = false
+				Item.Font = Enum.Font.Gotham
+				Item.Text = addtext
+				Item.TextColor3 = Color3.fromRGB(255, 255, 255)
+				Item.TextSize = 15.000
+				Item.TextTransparency = 0.300
 
 				ItemCorner.CornerRadius = UDim.new(0, 4)
 				ItemCorner.Name = "ItemCorner"
@@ -1705,7 +1705,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 					Title.Text = text
 					Selected = addtext
 					DropToggled = not DropToggled
-					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -1746,7 +1746,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 				end)
 				if DropToggled == true then
 					Title.Text = Selected
-					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+					Dropdown:TweenSize(UDim2.new(0, 457, 0, 43), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 					TweenService:Create(
 						Title,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
