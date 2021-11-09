@@ -2517,7 +2517,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 			end)
 			Container.CanvasSize = UDim2.new(0, 0, 0, ContainerLayout.AbsoluteContentSize.Y)
 		end
-		function ContainerContent:Textbox(text,desc,disapper,callback)
+		function ContainerContent:Textbox(text,desc,callback)
 			if desc == "" or desc == nil then
 				desc = "do not have anything"
 			end
