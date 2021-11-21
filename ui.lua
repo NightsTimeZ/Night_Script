@@ -187,6 +187,12 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	ContainerFolder.Name = "ContainerFolder"
 	ContainerFolder.Parent = MainFrame
 
+	local backuigrown = Instance.new("UIStroke")
+	backuigrown.Thickness = 3.5
+	backuigrown.Parent = MainFrame
+	backuigrown.Transparency = 0.7
+	backuigrown.Color = Color3.fromRGB(0,0,180)
+
 	MakeDraggable(Drag,MainFrame)
 	MakeDraggable(LeftFrame,MainFrame)
 	MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
