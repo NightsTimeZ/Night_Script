@@ -187,19 +187,6 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	ContainerFolder.Name = "ContainerFolder"
 	ContainerFolder.Parent = MainFrame
 
-    Glow.Name = "Glow"
-    Glow.Parent = LeftFrame
-    Glow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Glow.BackgroundTransparency = 1.000
-    Glow.BorderSizePixel = 0
-    Glow.Position = UDim2.new(0, -15, 0, -15)
-    Glow.Size = UDim2.new(1, 30, 1, 30)
-    Glow.ZIndex = 0
-    Glow.Image = "rbxassetid://4996891970"
-    Glow.ImageColor3 = Color3.fromRGB(0, 0, 180)
-    Glow.ScaleType = Enum.ScaleType.Slice
-    Glow.SliceCenter = Rect.new(20, 20, 280, 280)
-
 	MakeDraggable(Drag,MainFrame)
 	MakeDraggable(LeftFrame,MainFrame)
 	MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
