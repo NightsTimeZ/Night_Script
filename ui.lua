@@ -1,6 +1,10 @@
 -- you can use this ui ;3 free for all
 
-do if game.CoreGui:FindFirstChild("Nights Ui") then game.CoreGui:FindFirstChild("Nights Ui"):Destroy() end end;
+if _G.oldNameUi == nil then
+    _G.oldNameUi = "Night Hub Ui"
+end
+
+do if game.CoreGui:FindFirstChild(_G.oldNameUi) then game.CoreGui:FindFirstChild(_G.oldNameUi):Destroy() end end;
 
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local PresetColor = Color3.fromRGB(66, 134, 255)
@@ -11,8 +15,24 @@ local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local CloseBind = Enum.KeyCode.RightControl
 
+local function ranc()
+	local chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+	local length = 10
+	local randomStringe = ''
+	charTable = {}
+	for c in chars:gmatch"." do
+		table.insert(charTable, c)
+	end
+	for i = 1, length do
+		randomStringe = randomStringe .. charTable[math.random(1, #charTable)]
+	end
+	return tostring(randomStringe)
+end
+
+_G.oldNameUi = ranc()
+
 local FluxLib = Instance.new("ScreenGui")
-FluxLib.Name = "Nights Ui"
+FluxLib.Name = _G.oldNameUi
 FluxLib.Parent = game.CoreGui
 FluxLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
