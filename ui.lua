@@ -134,16 +134,17 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	MainFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 	MainFrame.ClipsDescendants = true
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-	MainFrame.Size = UDim2.new(0, 0, 0, 0)
+	MainFrame.Size = UDim2.new(0, 500, 0, 484)
 
 	MainCorner.CornerRadius = UDim.new(0, 5)
 	MainCorner.Name = "MainCorner"
 	MainCorner.Parent = MainFrame
 
 	LeftFrame.Name = "LeftFrame"
-	LeftFrame.Parent = MainFrame
+	LeftFrame.Parent = FluxLib
 	LeftFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-	LeftFrame.Size = UDim2.new(0, 205, 0, 484)
+	LeftFrame.Position = UDim2.new(0, 5, 0, 100)
+	LeftFrame.Size = UDim2.new(0, 205, 0, 450)
 
 	LeftCorner.CornerRadius = UDim.new(0, 5)
 	LeftCorner.Name = "LeftCorner"
@@ -200,9 +201,9 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	Drag.Name = "Drag"
 	Drag.Parent = MainFrame
 	Drag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Drag.BackgroundTransparency = 1.000
-	Drag.Position = UDim2.new(0.290368259, 0, 0, 0)
-	Drag.Size = UDim2.new(0, 501, 0, 23)
+	Drag.BackgroundTransparency = 1
+	Drag.Position = UDim2.new(0, 0, 0, 0)
+	Drag.Size = UDim2.new(0, 500, 0, 23)
 
 	ContainerFolder.Name = "ContainerFolder"
 	ContainerFolder.Parent = MainFrame
@@ -214,8 +215,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 	backuigrown.Color = Color3.fromRGB(0,0,180)
 
 	MakeDraggable(Drag,MainFrame)
-	MakeDraggable(LeftFrame,MainFrame)
-	MainFrame:TweenSize(UDim2.new(0, 706, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
+	MakeDraggable(LeftFrame,LeftFrame)
+	MainFrame:TweenSize(UDim2.new(0, 500, 0, 484), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .3, true)
 	_G.Delay = false
 	UserInputService.InputBegan:Connect(
 		function(io, p)
@@ -484,8 +485,8 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Container.BackgroundTransparency = 1.000
 		Container.BorderSizePixel = 0
-		Container.Position = UDim2.new(0.321529746, 0, 0.0475206599, 0)
-		Container.Size = UDim2.new(0, 470, 0, 438)
+		Container.Position = UDim2.new(0, 25, 0, 15)
+		Container.Size = UDim2.new(0, 470, 0, 460)
 		Container.CanvasSize = UDim2.new(0, 0, 0, 0)
 		Container.ScrollBarThickness = 5
 		Container.Visible = false
